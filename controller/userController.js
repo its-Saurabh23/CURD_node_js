@@ -30,10 +30,10 @@ const getUsers = async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 };
-User
+
 const updateUser = async (req, res) => {
   try {
-    const user = await await User.findByIdAndUpdate(req.params.id, req.body, {
+    const user = await User.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     });
     if (!user) res.status(404).json({ message: "Users not found" });
