@@ -5,7 +5,7 @@ const router  = require('./routes/routes')
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 
-const PORT = process.env.PORt || 3000; 
+const PORT = process.env.PORT || 3000; 
 dotenv.config();
 
  
@@ -16,8 +16,8 @@ app.use(bodyParser.json());
 app.get('/',(req,res)=>{
   res.send('Server is working......');
 })
-app.use('/api/users',router)
+app.use('/api/users',router);
 
 app.listen(PORT,()=>{
-   console.log(`Server is running on port ${PORT}`)
+   console.log(`Server is running on port ${PORT}`);
 }) 
